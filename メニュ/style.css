@@ -1,0 +1,188 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    height:100vh;
+    background-color: grey;
+}
+h1{
+    font-size: 70px;
+    color: black;
+    border: 2px dotted springgreen;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+#jikan{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    color: azure;
+    font-size: 150%;
+
+}
+/*おしらせのとこ*/
+#TITLE{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top: 130px;
+    right: 45px;
+    text-align: center;
+    border-radius: 10%;
+    background-color: white;
+    font-size: 150%;
+}
+.nanu{
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    top: 170px;
+    right: 40px;
+    background-color: white;
+    box-shadow: 0 0 1px white;
+    border: 5px solid black;
+    list-style-type: none;
+}
+/*左のメニュー全体*/
+.navigation{
+    top: 0;
+    height: 100vh;
+    width: 38px;
+    position: fixed;
+    background-color: darkkhaki;
+    box-shadow: 10px 0 1px red;
+    border-left: 10px solid darkkhaki;
+    overflow-x: hidden;
+    transition: all 300ms ease-in-out;
+    z-index: 10;
+}
+.navigation:hover{
+    width: 35vh;
+}
+/*項目全体的に*/
+.navigation ul{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    padding-top: 10px;
+    display:flex;
+    flex-direction: column;
+}
+.navigation ul h3{
+    position: flex;
+    top: 10px;
+    white-space: nowrap;
+    z-index: 12;
+}
+.navigation ul li {
+    list-style: none;
+    display: block;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    /*border-radius: 15px;
+    background-color: red;*/
+}
+/*あくてぃぶ*/
+.navigation ul li.active{
+    background-color: red;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.navigation ul li.active:hover{
+    background-color: red;
+    z-index: 11;
+}
+/*付け根*/
+.navigation ul li.active::before{
+    content:"";
+    position: absolute;
+    background-color: darkkhaki;
+    width: 27px;
+    height: 27px;
+    top: -27px;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 red;
+    z-index: 11;
+}
+.navigation ul li.active::after{
+    content:"";
+    position: absolute;
+    background-color: darkkhaki;
+    width: 27px;
+    height: 27px;
+    bottom: -27px;
+    right: 0;
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 red;
+    z-index: 11;
+}
+
+/*かーそるあわせたときのいろかわるやつ*/
+.navigation ul li:hover{
+    position: relative;
+    background-color: rgb(215, 208, 105);
+    border-radius: 15px;
+    z-index: 15;
+}
+/*サブメニュー*/
+.ichiran{
+    position: absolute;
+    height: 40px; 
+    width: 30vh;
+    left: 50vh;
+    top: 150px;
+}
+.ichiran p{
+    size: 120%;
+    position: relative;
+    text-align: center;
+    background-color: white;
+    margin-bottom: 6px;
+    border: 5px solid white;
+}
+.ichiran ul li{
+    box-shadow: -5px 3px 0 black;
+    margin-bottom: 6px;
+    padding: 10px 10px 10px 10px;
+    background-color: gold;
+    list-style-type: none;
+    text-align: center;
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: black;
+    width: 100%;
+    display: flex;
+    position:relative;
+}
+
+
+/*あいこん*/
+.navigation ul li a .icon{
+    display: flex;
+    min-width: 30px ;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    z-index: 16;
+
+}
+.navigation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 150%;
+}
+/*項目*/
+.navigation ul li a .title{
+    padding-left: 10px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+

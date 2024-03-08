@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>埋葬</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="jajajajaja.js"></script>
+    <link rel="stylesheet" href="./Untitled-1.css">
+</head>
+<body>
+    <h1>ゲーム</h1>
+    <p id="jikan">ここに時間出る</p>
+    <!--お知らせ板-->
+    
+    <span class="ichiran">
+        <p>つぶやき</p>
+        <ul>
+            <li id="gaame">
+                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                <span class="taitle">ゲーム</span>
+            </li>
+            <li id="meshi">
+                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                <span class="taitle">めし</span>
+            </li>
+            <li id="programing">
+                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                <span class="taitle">プログラミング</span>
+            </li>
+            <li id="home">
+                <a href="" target="_blank" rel="noopener noreferrer"></a>
+                <span class="taitle">ホーム</span>
+            </li>
+        </ul>
+    </span>
+    
+    <div class="navigation">
+        <ul>
+            <h3>外部サイト</h3>
+            <li class="list active">
+                <a href="" target="_blank" rel=”noopener noreferrer”>
+                    <span class="icon"><ion-icon name="dice-outline"></ion-icon></span>
+                    <span class="title">X(Twitter)</span>
+                </a>
+            </li>
+            <li class="list">
+                <a  target="_blank">
+                    <span class="icon"><ion-icon name="eye-outline"></ion-icon></span>
+                    <span class="title">Instagram</span>
+                </a>
+            </li>            
+            <li class="list">
+                <a href="https://www.op.gg/summoners/jp/%E5%86%85%E6%9C%88%E8%94%B5-3696" target="_blank">
+                    <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+                    <span class="title">OP.GG</span>
+                </a>
+            </li>     
+        </ul>
+    </div>
+   
+  
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src="jajajajaja.js"></script>
+<script>
+    'use strict';
+/*時計*/
+    function recalc(){
+    document.getElementById("jikan").textContent = new Date().toLocaleString({ timeZone: 'Asia/Tokyo' });
+    setTimeout(recalc,1000);
+}
+recalc();
+/*呼び出したらクリックした項目だけactive*/
+const list = document.querySelectorAll(".list");
+console.log(list);
+function hajimeni(){
+    console.log('確認');
+    list.forEach((saik)=>
+    saik.classList.remove("active"));
+    this.classList.add("active");
+}
+list.forEach((kansu) =>{
+    kansu.addEventListener("click",hajimeni);
+}
+)
+
+/*サブメニュー*/
+
+let gaame = document.getElementById('gaame');
+gaame.addEventListener('click', function(){
+    console.log('確認');
+    location.assign('./abetai-game.html');
+});
+meshi.addEventListener('click', function(){
+    console.log('確認');
+    location.assign('./abetai-meshi.html');
+});
+programing.addEventListener('click', function(){
+    console.log('確認');
+    location.assign('./abetai-programing.html');
+});
+home.addEventListener('click', function(){
+    console.log('確認');
+    location.assign('./abetai.html');
+});
+
+</script>
+
+</body>
+</html>
